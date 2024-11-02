@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Timeline</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="add-node">
+            <h2>Add New Event</h2>
+            <form id="nodeForm">
+                <input type="date" id="date" required>
+                <select id="type" required>
+                    <option value="text">Text</option>
+                    <option value="image">Image</option>
+                </select>
+                <div id="contentWrapper">
+                    <textarea id="textContent" placeholder="Enter text content"></textarea>
+                    <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                </div>
+                <button type="submit">Add to Timeline</button>
+            </form>
+        </div>
+        <div class="timeline" id="timeline"></div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
